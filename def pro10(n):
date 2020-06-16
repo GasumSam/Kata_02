@@ -1,0 +1,8 @@
+def pro10(n):
+    return n * 10
+
+numero = input('Numero')
+
+assert por10(numero) == int(numero)*10
+
+print('Final de programa')
