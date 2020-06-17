@@ -1,6 +1,6 @@
 
 def esbisiesto(anno):
-    return anno % 4 == 0 or (anno % 400 == 0 and anno % 100 != 0):
+    return anno % 4 == 0 or (anno % 400 == 0 and anno % 100 != 0)
 
 n = input('Año: ')
 

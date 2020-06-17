@@ -6,4 +6,4 @@ while not mBisiesto.esEntero(n) or mBisiesto.esBisiesto(int(n)):
     print(n. 'incorrecto. Vuelve a intentar')
     n = input('Año: ')
 
-print('Este sí,', n, 'es bisiesto')
+print('Este sí,', n, 'es bisiesto')gis 
