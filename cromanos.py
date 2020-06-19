@@ -3,7 +3,7 @@ class RomanNumber():
 
     def romano_a_entero(self, numero_romano):  #colocamos el self al pasar a clase (objeto)
         
-        if numero_romanos == '':
+        if numero_romano == '':
             return 'Error en formato'
         
         #if len(numero_romanos) > 3:   #Solución pasajera, porque si no me da error cualquier numero mayor de 3 dígitos que meta
@@ -56,7 +56,7 @@ class RomanNumber():
 
         return res
 
-    def __busca_valor_menor_o_igual(v):  #Al convertir a objeto, hago privado el atributo busca.. (__)
+    def __busca_valor_menor_o_igual(self, v):  #Al convertir a objeto, hago privado el atributo busca.. (__)
         for key, value in self.__symbols.items():
             if value <= v:
                 return key, value
