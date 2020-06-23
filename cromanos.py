@@ -75,6 +75,7 @@ class RomanNumber():
                 return key, value
 
     def __descomponer(self, numero):  #Al convertir a objeto, hago privado el atributo descomponer (__)
+    
         res = []
         for orden in range(3, 0, -1):
             resto = numero % 10 ** orden
@@ -82,3 +83,42 @@ class RomanNumber():
             numero = resto
         res.append(numero)
         return res
+
+    def __str__(self):
+        return self.rvalue
+
+    def __repr__(self):
+        return self.rvalue 
+
+    def __add__(self, other):   #Método mágico (value es un nombre que asignamos nosotros a voluntad)
+        #        I,     III
+        if isinstance(other, int):
+            suma = self.value + other
+        else:
+            suma = self.value + other.value 
+        resultado = RomanNumber(suma)
+        return resultado
+
+    def __radd__(self, other):
+        return self.__add__(other) #Para no repetir todo el código de __add__ hacemos un return a la instancia
+        '''         #dont repeat yourself
+        if isinstance(value, int):
+            suma = self.value + value
+        else:
+            suma = self.value + value.value 
+        resultado = RomanNumber(suma)
+        return resultado
+        '''
+    def __sub__(self, other):   # Métodos mágicos
+        if isinstance(other, int):
+            suma = self.value - other
+        else:
+            resta = self.value - other.value
+        resultado = RomanNumber(resta)
+        return resultado
+
+    def __rsub__(self, other):
+        return self.__sub__(other)
+
+    def __eq__(self, other):
+        return self.value == other.value
